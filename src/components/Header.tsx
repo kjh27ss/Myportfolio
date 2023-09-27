@@ -35,7 +35,7 @@ const Header = () => {
     </ClickAwayListener>    
   )
 }
-
+   
 export default Header
 
 const StyledHeader = styled.header<Props>`
