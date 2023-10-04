@@ -8,28 +8,26 @@ const Heading:React.FC<HeadingInterface> = ({
   children, variant, color
 }) => {
 
-  switch(variant){
-    case "h1":
+  if(variant === 'h1'){
       return(
         <StyleH1 variant={variant} color={color}>
           {children}
         </StyleH1>
-      )
-    break;
-    case "h2":
+      );
+  } else if (variant === 'h2'){
+    return(
       <StyleH2 variant={variant} color={color}>
           {children}
         </StyleH2>
 
-    break;
-    default:
+    );
+  }else {
+    return(
       <StyleH3 variant={variant} color={color}>
           {children}
         </StyleH3>
-  }
-  return (
-    <div>Heading</div>
-  )
+        );
+    }
 }
 
 const StyleH1 = styled.h1<HeadingInterface>`

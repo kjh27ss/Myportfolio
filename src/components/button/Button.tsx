@@ -10,9 +10,11 @@ type Props = {
     button? : "button";
 }
 
-const Button = ({}) => {
+const Button = ({to, children, className, button, variant}:Props) => {
   return (
-    <div>Button</div>
+    <StyledButton className={className} to={to} variant={variant} as={button}>
+        {children}
+    </StyledButton>
   )
 }
 

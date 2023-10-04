@@ -13,7 +13,8 @@ const content = {
   heading:"Award-winning custom designs and digital branding solutions",
   paragraph:"With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences.Find out more about our services."
 
-}
+};
+
 const Hero = (props:Props) => {
   const { heading, paragraph } = content;
   return (
@@ -24,11 +25,17 @@ const Hero = (props:Props) => {
             <Content
               heading={heading}
               headingColor="primary"
-              variant="h1"/>
+              variant="h1"
+              paragraph={paragraph}
+              paragraphColor='light'
+              />
+              <Button to="/about" variant="light">
+                Learn More
+              </Button>
             <h1>{heading}</h1>
-            <p>{paragraph}</p>
-            <Img src={iphone} alt='iphone'/>
+            <p>{paragraph}</p>            
           </Wrapper>
+          <Img src={iphone} alt='iphone'/>
         </StyleHero>
       </Card>
     </Container>
@@ -39,11 +46,6 @@ const Hero = (props:Props) => {
 
 const Img = styled.img`
   position:absolute;
-`;
-
-const StyledCard = styled.div<Props>`
-  border-radius:8px;
-
 `;
 
 const StyleHero = styled.section`

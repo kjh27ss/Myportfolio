@@ -4,6 +4,7 @@ import GlobalStyle from './styles/GlobalStyle'
 import { BrowserRouter as Router } from 'react-router-dom'
 import theme from './styles/theme'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import Routes from './pages/Routes'
 
@@ -16,6 +17,7 @@ const App = () => {
             <Header />
             <Routes />
           </ScrollToTop>
+          <Footer />
        </Router>  
     </ThemeProvider>
     
